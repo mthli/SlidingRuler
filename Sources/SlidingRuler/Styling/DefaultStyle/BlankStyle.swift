@@ -31,13 +31,22 @@ import SwiftUI
 
 public struct BlankSlidingRulerStyle: SlidingRulerStyle {
 
+    private let cursorAlignmentHolder: VerticalAlignment
+    private let hasHalfHolder: Bool
     private let hasMarksHolder: Bool
 
-    public init(hasMarks: Bool = false) {
+    public init(
+        cursorAlignment: VerticalAlignment = .top,
+        hasHalf: Bool = false,
+        hasMarks: Bool = false
+    ) {
+        self.cursorAlignmentHolder = cursorAlignment
+        self.hasHalfHolder = hasHalf
         self.hasMarksHolder = hasMarks
     }
 
-    public let cursorAlignment: VerticalAlignment = .top
+    public var cursorAlignment: VerticalAlignment { cursorAlignmentHolder }
+    public var hasHalf: Bool { hasHalfHolder }
     public var hasMarks: Bool { hasMarksHolder }
 
     public func makeCellBody(configuration: SlidingRulerStyleConfiguation) -> some FractionableView {
