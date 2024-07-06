@@ -1,6 +1,6 @@
 //
 //  BlankStyle.swift
-//  
+//
 //  SlidingRuler
 //
 //  MIT License
@@ -30,9 +30,15 @@
 import SwiftUI
 
 public struct BlankSlidingRulerStyle: SlidingRulerStyle {
-    public let cursorAlignment: VerticalAlignment = .top
 
-    public init() {}
+    private let hasMarksHolder: Bool
+
+    public init(hasMarks: Bool) {
+        self.hasMarksHolder = hasMarks
+    }
+
+    public let cursorAlignment: VerticalAlignment = .top
+    public var hasMarks: Bool { hasMarksHolder }
 
     public func makeCellBody(configuration: SlidingRulerStyleConfiguation) -> some FractionableView {
         BlankCellBody(mark: configuration.mark,
