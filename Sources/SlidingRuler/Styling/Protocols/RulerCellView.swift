@@ -58,9 +58,9 @@ extension RulerCellView {
                 .equatable()
                 .foregroundColor(.init(.gray))
                 .clipShape(maskShape)
-            scale
-                .equatable()
-                .foregroundColor(.init(.white))
+            // scale
+            //     .equatable()
+            //     .foregroundColor(.init(.white))
         }
         .frame(width: cellWidth)
     }
