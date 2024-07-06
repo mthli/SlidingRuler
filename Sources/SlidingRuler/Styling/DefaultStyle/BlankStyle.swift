@@ -33,7 +33,7 @@ public struct BlankSlidingRulerStyle: SlidingRulerStyle {
 
     private let hasMarksHolder: Bool
 
-    public init(hasMarks: Bool) {
+    public init(hasMarks: Bool = false) {
         self.hasMarksHolder = hasMarks
     }
 
