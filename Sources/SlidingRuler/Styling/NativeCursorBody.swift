@@ -29,6 +29,9 @@
 import SwiftUI
 
 public struct NativeCursorBody: View {
+
+    public init() {}
+
     public var body: some View {
         Capsule()
             .foregroundColor(.red)
