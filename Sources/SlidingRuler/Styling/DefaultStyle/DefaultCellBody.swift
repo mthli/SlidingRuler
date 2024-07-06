@@ -30,12 +30,12 @@
 import SwiftUI
 
 struct BlankCellBody: NativeRulerCellView {
-    public var mark: CGFloat
-    public var bounds: ClosedRange<CGFloat>
-    public var step: CGFloat
-    public var cellWidth: CGFloat
+    var mark: CGFloat
+    var bounds: ClosedRange<CGFloat>
+    var step: CGFloat
+    var cellWidth: CGFloat
 
-    public var scale: some ScaleView { DefaultScaleView(width: cellWidth) }
+    var scale: some ScaleView { DefaultScaleView(width: cellWidth) }
 }
 
 struct DefaultCellBody: NativeMarkedRulerCellView {
